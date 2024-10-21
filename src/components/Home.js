@@ -12,24 +12,25 @@ function Home() {
     }, []);
 
     return (
-        <div className="container mt-4">
-            <h2>Catálogo de Filmes</h2>
-            <div className="row">
-                {filmes.map(filme => (
-                    <div key={filme.id} className="col-md-4 mb-3">
-                        <div className="card p-3">
-                            <h5>ID: {filme.id}</h5>
-                            <Link to={`/read/${filme.id}`}>
-                                <h6 style={{ cursor: 'pointer', color: 'blue' }}>
-                                    Nome: {filme.nome}
-                                </h6>
-                            </Link>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+      <div className="container mt-4">
+          <h2>Catálogo de Filmes</h2>
+          <div className="row">
+              {filmes.map(filme => (
+                  <div key={filme.id} className="col-12 mb-3">
+                      <div className="card p-3">
+                          <h5>ID: {filme.id}</h5>
+                          <Link to={`/read/${filme.id}`}>
+                              <h6 style={{ cursor: 'pointer', color: 'blue' }}>
+                                  Nome: {filme.nome}
+                              </h6>
+                          </Link>
+                      </div>
+                  </div>
+              ))}
+          </div>
+      </div>
+  );
+  
 }
 
 export default Home;
